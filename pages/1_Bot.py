@@ -7,14 +7,13 @@ gif_url = "https://raw.githubusercontent.com/j7808833/test_02/main/pic/Cyberpunk
 # 使用 st.image 顯示 GIF 圖片
 st.image(gif_url)
 
-
-def call_coze_api(question):
+def call_coze_api(conversation):
     url = "https://api.coze.com/open_api/v2/chat"
     payload = {
         "conversation_id": "123",
         "bot_id": "7376255263235424257",
         "user": "123333333",
-        "query": question,
+        "query": conversation,
         "stream": False,
     }
     headers = {
@@ -46,8 +45,12 @@ if question := st.chat_input("請輸入問題..."):
     with st.chat_message("user"):
         st.markdown(f"{question}")
     st.session_state.knowledge_messages.append({"role": "user", "content": question})
+    
+    # 構建對話歷史
+    conversation = "\n".join([msg["content"] for msg in st.session_state.knowledge_messages])
+    
     with st.spinner("思考中..."):
-        response = call_coze_api(question)
+        response = call_coze_api(conversation)
         try:
             if "messages" in response:
                 messages = response["messages"]
