@@ -12,7 +12,7 @@ def call_coze_api(question):
     url = "https://api.coze.com/open_api/v2/chat"
     payload = {
         "conversation_id": "123",
-        "bot_id": "7355203240146829328",
+        "bot_id": "7376255263235424257",
         "user": "123333333",
         "query": question,
         "stream": False,
