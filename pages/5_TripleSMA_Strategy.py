@@ -228,6 +228,9 @@ else:
                     cerebro.broker.setcash(initial_cash)
                     cerebro.broker.setcommission(commission=commission / 100)  # 转换为十进制形式
                     cerebro.addsizer(FixedAmountSizer, amount=trade_amount)  # 使用自定义的FixedAmountSizer
+                    
+                    # 運行回測
+                    st.write("開始回測...")
                     cerebro.run()
                     final_value = cerebro.broker.getvalue()
 
