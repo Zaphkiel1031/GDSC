@@ -166,6 +166,8 @@ if st.button('運行預測'):
     except Exception as e:
         st.error(f'發生錯誤: {e}')
 
+st.markdown("***")
+
 # 添加滑塊來控制參數
 initial_cash = st.slider('預算', min_value=0, max_value=5000000, step=10000, value=10000)
 monthly_investment = st.slider('每月投資金額', min_value=0, max_value=50000, step=1000, value=1000)
