@@ -190,9 +190,9 @@ end_date = st.date_input("结束日期", pd.to_datetime("today"))
 short_period = st.slider("短期均線", 1, 30, 5)
 median_period = st.slider("中期均線", 15, 100, 20)
 long_period = st.slider("長期均線", 30, 200, 60)
-commission = st.slider('交易手續费 (%)', min_value=0.0, max_value=0.5, step=0.0005, format="%.4f", value=0.001)
+commission = st.slider('交易手續費 (%)', min_value=0.0, max_value=1.0, step=0.0005, format="%.4f", value=0.001)
 trade_amount = st.slider("每次交易金额", min_value=0, max_value=50000 , step=1000, value=1000)
-initial_cash = st.slider("初始现金", min_value=0, max_value=10000000, step=10000, value=10000)
+initial_cash = st.slider("預算", min_value=0, max_value=5000000, step=10000, value=10000)
 
 # 檢查均線設置是否符合要求
 if short_period >= median_period or median_period >= long_period:
