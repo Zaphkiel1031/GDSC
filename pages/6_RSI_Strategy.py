@@ -119,7 +119,7 @@ RSI（相對強弱指數）是一種動量指標，用於衡量股票價格變�
 """)
 
 # 使用者輸入參數
-symbol = st.text_input("股票符號", "AAPL")
+symbol = st.text_input("股票代碼，台股請記得在最後加上.TW", "AAPL")
 start_date = st.date_input("開始日期", datetime(2020, 1, 1))
 end_date = st.date_input("結束日期", datetime.today())
 rsi_period = st.slider("RSI 週期", 1, 50, 14)

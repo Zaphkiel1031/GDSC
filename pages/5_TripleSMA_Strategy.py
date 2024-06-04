@@ -183,7 +183,7 @@ st.markdown("""
 """)
 
 # 用户输入参数
-symbol = st.text_input("股票符號", "AAPL")
+symbol = st.text_input("股票代碼，台股請記得在最後加上.TW", "AAPL")
 start_date = st.date_input("開始日期", pd.to_datetime("2020-01-01"))
 end_date = st.date_input("结束日期", pd.to_datetime("today"))
 
