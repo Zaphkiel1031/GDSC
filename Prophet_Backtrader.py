@@ -167,7 +167,7 @@ if st.button('運行預測'):
         st.error(f'發生錯誤: {e}')
 
 # 添加滑塊來控制參數
-initial_cash = st.slider('預算', min_value=0, max_value=10000000, step=10000, value=10000)
+initial_cash = st.slider('預算', min_value=0, max_value=5000000, step=10000, value=10000)
 monthly_investment = st.slider('每月投資金額', min_value=0, max_value=50000, step=1000, value=1000)
 commission = st.slider('手續費 (%)', min_value=0.0, max_value=1.0, step=0.0001, format="%.4f", value=0.001)
 investment_day = st.slider('每月投資日', min_value=1, max_value=28, step=1, value=1)
