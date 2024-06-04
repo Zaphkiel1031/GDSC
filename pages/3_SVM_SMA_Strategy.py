@@ -293,7 +293,7 @@ short_period = st.slider("短期均線", 1, 60, 5)
 long_period = st.slider("長期均線", 30, 200, 60)
 commission = st.slider('交易手續費 (%)', min_value=0.0, max_value=1.0, step=0.0005, format="%.4f", value=0.001)
 trade_amount = st.slider("每次交易金額", min_value=0, max_value=50000, step=1000, value=1000)
-initial_cash = st.slider("預算", min_value=0, max_value=10000000, step=10000, value=10000)
+initial_cash = st.slider("預算", min_value=0, max_value=5000000, step=10000, value=10000)
 
 # 檢查短期均線是否大於長期均線
 if short_period >= long_period:
