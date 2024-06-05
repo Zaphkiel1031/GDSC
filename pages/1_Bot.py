@@ -86,7 +86,7 @@ html_code = """
       try {
         new CozeWebSDK.WebChatClient({
           config: {
-            bot_id: '7376255263235424257',  
+            bot_id: '7355203240146829328',  
           },
           componentProps: {
             title: 'Coze',  
